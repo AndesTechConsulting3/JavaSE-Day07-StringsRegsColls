@@ -35,7 +35,6 @@ public class AppReg {
         {
             System.out.println("data: "+ matcher.group() + ", start:" +
                     matcher.start() + ", end:" + matcher.end());
-
         }
 
 
