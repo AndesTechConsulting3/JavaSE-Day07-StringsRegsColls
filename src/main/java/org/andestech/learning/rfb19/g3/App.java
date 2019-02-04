@@ -55,7 +55,7 @@ public class App
         System.out.println(Arrays.toString(fio));
         //--------------------
         // data
-        String data = "7657;121212;23234      9898,2112,98987";
+        String data = "7657;121212;23234      98A98,2112,98987";
         String[] datas =
         //data.split(",|;| ");
         data.split("[,;]|[ ]+");
@@ -66,10 +66,23 @@ public class App
         // + = {1,}
 
         int[] intDatas = new int[datas.length];
-        for(int i =0; i<datas.length; i++) intDatas[i] =
-                Integer.parseInt(datas[i]);
+        for(int i =0; i<datas.length; i++) {
+            try{
+            intDatas[i] =
+                    Integer.parseInt(datas[i]);
+        }
+        catch (NumberFormatException ex){
+            intDatas[i]=-1;
+        }
 
 
+        }
+        for(int i =0; i<intDatas.length; i++)
+        {
+            intDatas[i] *= 10;
+        }
+
+        System.out.println(Arrays.toString(intDatas));
 
 
 
