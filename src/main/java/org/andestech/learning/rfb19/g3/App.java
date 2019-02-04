@@ -56,6 +56,10 @@ public class App
         //--------------------
         // data
         String data = "7657;121212;23234 9898,2112,98987";
+        String[] datas =
+        //data.split(",|;| ");
+        data.split("[,; ]");
+        System.out.println(Arrays.toString(datas));
 
 
 
