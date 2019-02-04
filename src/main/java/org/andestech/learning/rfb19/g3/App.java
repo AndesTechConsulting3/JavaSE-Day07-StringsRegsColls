@@ -55,11 +55,20 @@ public class App
         System.out.println(Arrays.toString(fio));
         //--------------------
         // data
-        String data = "7657;121212;23234 9898,2112,98987";
+        String data = "7657;121212;23234      9898,2112,98987";
         String[] datas =
         //data.split(",|;| ");
-        data.split("[,; ]");
+        data.split("[,;]|[ ]+");
         System.out.println(Arrays.toString(datas));
+
+        // (asd){k,j}
+        // ? = {0,1}
+        // + = {1,}
+
+        int[] intDatas = new int[datas.length];
+        for(int i =0; i<datas.length; i++) intDatas[i] =
+                Integer.parseInt(datas[i]);
+
 
 
 
